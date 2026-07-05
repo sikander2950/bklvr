@@ -6,16 +6,25 @@ export interface Book {
   image: string;
 }
 
-export interface OrbitBookProps {
-  image: string;
-  title: string;
-  x: number;
-  y: number;
-}
-
 export interface OrbitProps {
   size: number;
   rotation: number;
+  time: number;
+}
+
+export interface OrbitBookProps {
+  image: string;
+  title: string;
+
+  x: number;
+  y: number;
+
+  width: number;
+  height: number;
+
+  scale: number;
+  opacity: number;
+  zIndex: number;
 }
 
 export interface OrbitSystemProps {

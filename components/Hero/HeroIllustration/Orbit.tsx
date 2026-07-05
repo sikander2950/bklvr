@@ -6,21 +6,46 @@
 import OrbitBook from "./OrbitBook";
 import { books } from "./books";
 import type { OrbitProps } from "./types";
-import { ORBIT_RADIUS_RATIO } from "./constants";
 
-export default function Orbit({ size, rotation }: OrbitProps) {
-  const radius = size > 0 ? size * ORBIT_RADIUS_RATIO : 180;
+export default function Orbit({
+  size,
+  rotation,
+  time,
+}: OrbitProps) {
+  // Responsive Orbit Radius
+  const radius =
+    size > 0
+      ? Math.max(140, Math.min(size * 0.4, 260))
+      : 180;
+
+  // Responsive Book Size
+  const bookWidth = Math.max(60, Math.min(size * 0.16, 100));
+  const bookHeight = bookWidth * (100 / 70);
 
   return (
     <div className="absolute inset-0">
       {books.map((book, index) => {
-        const angle = (360 / books.length) * index + rotation;
+        // Calculate Angle
+        const angle =
+          (360 / books.length) * index + rotation;
 
-        const radians = (angle * Math.PI) / 180;
+        // Convert Angle → Radians
+        const radians =
+          (angle * Math.PI) / 180;
 
-        const x = Number((radius * Math.cos(radians)).toFixed(2));
+        // Geometry
+        const x = radius * Math.cos(radians);
+        const y = radius * Math.sin(radians);
 
-        const y = Number((radius * Math.sin(radians)).toFixed(2));
+        // 3D Depth Effect
+        const depth = (Math.sin(radians) + 1) / 2;
+
+        const scale = 0.85 + depth * 0.25;
+
+        const opacity = 0.6 + depth * 0.4;
+
+        const zIndex = Math.round(depth * 100);
+
         return (
           <OrbitBook
             key={book.id}
@@ -28,6 +53,11 @@ export default function Orbit({ size, rotation }: OrbitProps) {
             title={book.title}
             x={x}
             y={y}
+            width={bookWidth}
+            height={bookHeight}
+            scale={scale}
+            opacity={opacity}
+            zIndex={zIndex}
           />
         );
       })}
