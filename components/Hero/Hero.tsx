@@ -76,10 +76,7 @@ export default function Hero() {
           >
             Read Less.
             <br />
-            <span className="text-amber-600">
-              Discover 
-            </span>{" "}
-               More.
+            <span className="text-amber-600">Discover</span> More.
           </h1>
 
           {/* Description */}
@@ -95,9 +92,8 @@ export default function Hero() {
               sm:text-lg
             "
           >
-            Discover books tailored to your interests,
-            favorite authors and genres through
-            personalized recommendations.
+            Discover books tailored to your interests, favorite authors and
+            genres through personalized recommendations.
           </p>
 
           {/* Search */}
@@ -173,33 +169,21 @@ export default function Hero() {
             "
           >
             <div>
-              <h3 className="text-2xl font-bold text-slate-900">
-                25K+
-              </h3>
+              <h3 className="text-2xl font-bold text-slate-900">25K+</h3>
 
-              <p className="mt-1 text-slate-500">
-                Books
-              </p>
+              <p className="mt-1 text-slate-500">Books</p>
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-slate-900">
-                12K+
-              </h3>
+              <h3 className="text-2xl font-bold text-slate-900">12K+</h3>
 
-              <p className="mt-1 text-slate-500">
-                Readers
-              </p>
+              <p className="mt-1 text-slate-500">Readers</p>
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-slate-900">
-                4.9★
-              </h3>
+              <h3 className="text-2xl font-bold text-slate-900">4.9★</h3>
 
-              <p className="mt-1 text-slate-500">
-                Rating
-              </p>
+              <p className="mt-1 text-slate-500">Rating</p>
             </div>
           </div>
         </div>
