@@ -1,4 +1,4 @@
-import SearchBar from "../Searchbar";
+import SearchBar from "../SearchBar";
 import HeroIllustration from "./HeroIllustration/HeroIllustration";
 
 export default function Hero() {
