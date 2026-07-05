@@ -1,4 +1,5 @@
-import SearchBar from "../Searchbar";
+import SearchBar from "../SearchBar";            // ✅ capital B matches file
+
 
 export default function HeroContent() {
   return (
