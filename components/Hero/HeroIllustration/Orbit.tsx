@@ -5,18 +5,11 @@
 
 import OrbitBook from "./OrbitBook";
 import { books } from "./books";
-import type { OrbitProps } from "./types";
+import type { OrbitProps } from "./Types";
 
-export default function Orbit({
-  size,
-  rotation,
-  time,
-}: OrbitProps) {
+export default function Orbit({ size, rotation, time }: OrbitProps) {
   // Responsive Orbit Radius
-  const radius =
-    size > 0
-      ? Math.max(140, Math.min(size * 0.4, 260))
-      : 180;
+  const radius = size > 0 ? Math.max(140, Math.min(size * 0.4, 260)) : 180;
 
   // Responsive Book Size
   const bookWidth = Math.max(60, Math.min(size * 0.16, 100));
@@ -26,12 +19,10 @@ export default function Orbit({
     <div className="absolute inset-0">
       {books.map((book, index) => {
         // Calculate Angle
-        const angle =
-          (360 / books.length) * index + rotation;
+        const angle = (360 / books.length) * index + rotation;
 
         // Convert Angle → Radians
-        const radians =
-          (angle * Math.PI) / 180;
+        const radians = (angle * Math.PI) / 180;
 
         // Geometry
         const x = radius * Math.cos(radians);

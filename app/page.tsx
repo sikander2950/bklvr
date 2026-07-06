@@ -1,6 +1,6 @@
 "use client";
 
-import Navbar from "../components/navbar";       // ✅ matches lowercase file
+import Navbar from "../components/Navbar";       // ✅ matches lowercase file
 import Hero from "@/components/Hero/Hero";       // ✅ absolute import is fine
 
 export default function Home() {

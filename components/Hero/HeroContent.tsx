@@ -42,7 +42,7 @@ export default function HeroContent() {
       {/* Stats */}
       <div className="mt-12 flex gap-10">
         <div>
-          <h3 className="text-2xl font-bold text-slate-900">25K+</h3>
+          <h3 className="text-2xl font-bold text-slatez-900">25K+</h3>
 
           <p className="text-slate-500">Books</p>
         </div>

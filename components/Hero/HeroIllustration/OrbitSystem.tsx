@@ -7,11 +7,9 @@
 
 import { useEffect, useState } from "react";
 import Orbit from "./Orbit";
-import type { OrbitSystemProps } from "./types";
+import type { OrbitSystemProps } from "./Types";
 
-export default function OrbitSystem({
-  size,
-}: OrbitSystemProps) {
+export default function OrbitSystem({ size }: OrbitSystemProps) {
   const [rotation, setRotation] = useState(0);
   const [time, setTime] = useState(0);
 
@@ -44,11 +42,7 @@ export default function OrbitSystem({
 
   return (
     <div className="absolute inset-0">
-      <Orbit
-        size={size}
-        rotation={rotation}
-        time={time}
-      />
+      <Orbit size={size} rotation={rotation} time={time} />
     </div>
   );
 }

@@ -6,7 +6,7 @@
 "use client";
 
 import Image from "next/image";
-import type { OrbitBookProps } from "./types";
+import type { OrbitBookProps } from "./Types";
 
 export default function OrbitBook({
   image,

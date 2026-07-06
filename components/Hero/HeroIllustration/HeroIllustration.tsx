@@ -7,7 +7,7 @@ import Background from "./Background";
 import Glow from "./Glow";
 import CenterOrb from "./CenterOrb";
 import OrbitSystem from "./OrbitSystem";
-import { useContainerSize } from "./useContainerSize";
+import { useContainerSize } from "./UseContainerSize";
 import OrbitRing from "./OrbitRing";
 
 export default function HeroIllustration() {

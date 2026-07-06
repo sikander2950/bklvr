@@ -1,5 +1,5 @@
 //Book data
-import type { Book } from "./types";
+import type { Book } from "./Types";
 export const books: Book[] = [
   {
     id: 1,
