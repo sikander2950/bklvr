@@ -4,7 +4,7 @@
 "use client";
 
 import OrbitBook from "./OrbitBook";
-import { books } from "./books";
+import { books } from "./Books";
 import type { OrbitProps } from "./Types";
 
 export default function Orbit({ size, rotation, time }: OrbitProps) {
